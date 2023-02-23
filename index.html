@@ -415,30 +415,30 @@
           </div>
           <!--  Form Section -->
           <div class="container col-lg-6 d-flex justify-content-center">
-            <form id="submit-form" action="">
+            <form id="submit-form">
               <i class="fas fa-paper-plane"></i>
 
               <div class="input-group">
                 <label>Full Name</label>
-                <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+                <input name="FullName" type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
                 <span id="name-error"></span>
               </div>
 
               <div class="input-group">
                 <label>Phone No.</label>
-                <input type="tel" placeholder="123 456 7890" id="contact-number" onkeyup="validateNumber()">
+                <input name="PhoneNo" type="tel" placeholder="123 456 7890" id="contact-number" onkeyup="validateNumber()">
                 <span id="Phone-error"></span>
               </div>
 
               <div class="input-group">
                 <label>Email Id</label>
-                <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validationEmail()">
+                <input name="Email" type="email" placeholder="Enter Email" id="contact-email" onkeyup="validationEmail()">
                 <span id="Email-error"></span>
               </div>
 
               <div class="input-group">
                 <label>Your Message</label>
-                <textarea id="contact-message" rows="5" placeholder="Enter your message"
+                <textarea class="message" id="contact-message" rows="5" placeholder="Enter your message"
                   onkeyup="validationMessage()"></textarea>
                 <span id="Message-error"></span>
               </div>
@@ -493,7 +493,7 @@
     $("#submit-form").submit((e)=>{
         e.preventDefault()
         $.ajax({
-            url:"https://script.google.com/macros/s/AKfycbwOo4ZJQ-a0qx3-isJL8dqOcfpAehkVRXE6ZLXZyHc2Pudm2MW-5vDzbD5Ia1hDDy7fgg/exec",
+            url:"https://script.google.com/macros/s/AKfycby28WL3LSBOp__mpcP1HfSUcmIGf9tNbiMo01UlkLe_HhsLfxxUfH5DKnSAfkSAin21/exec",
             data:$("#submit-form").serialize(),
             method:"post",
             success:function (response){

@@ -43,8 +43,7 @@ function validateNumber() {
 function validationEmail(){
     var email =document.getElementById("contact-email").value;
 
-    if(email.length == 0){
-        alert("emailis require");
+    if(email.length == 0){ 
         emailError.innerHTML= "email is require";
         return false;
     }
@@ -70,6 +69,7 @@ function validationMessage(){
 function validationForm(){
     if (!validateName() || !validateNumber() || !validationEmail() || !validationMessage() ){
         submitError.innerHTML= 'Please Fix Error to submite';
+        alert("pls check the field");
         return false;
     }
     alert("Can i Submite u r form......?");
